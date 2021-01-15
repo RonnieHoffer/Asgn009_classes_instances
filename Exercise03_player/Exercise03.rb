@@ -9,5 +9,7 @@ p player_01
 player_01.collect_treasure
 p player_01
 
-player_01.do_battle(1)
-p player_01
+7.times do
+    player_01.do_battle(50)
+    p player_01
+end

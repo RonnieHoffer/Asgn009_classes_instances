@@ -22,7 +22,7 @@ class Player
         if @health_points < 1 && @lives > 0
             @lives -= 1
             @health_points = 10
-        else
+        elsif @health_points < 1 && @lives == 0
             restart
         end        
     end
