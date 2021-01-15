@@ -16,11 +16,7 @@ class Paperboy
 
     def deliver(start_address, end_address)
         
-        if end_address >= start_address
-            houses = end_address - start_address + 1
-        elsif end_address < start_address
-            houses = start_address - end_address + 1
-        end
+        houses = (end_address - start_address).abs + 1
         
         if houses == @quota
             days_earnings = houses * 0.25
